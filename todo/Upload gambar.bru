@@ -1,0 +1,19 @@
+meta {
+  name: Upload gambar
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:4000/api/upload
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  gambar: @file(\\wsl.localhost\Ubuntu-22.04\home\tata\project-batch-4\backend-batch-4\public\ini.txt)
+}
+
+settings {
+  encodeUrl: true
+}
